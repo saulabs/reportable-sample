@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+100.times do |i|
+  (rand * 100).to_i.times do
+    User.create(:created_at => Time.now - i.days)
+  end
+end
