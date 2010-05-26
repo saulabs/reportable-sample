@@ -1,3 +1,9 @@
 <h1>reportable demo</h1>
+<h2>using g.Raphael (recommended)</h2>
+<%= raphael_report_tag(User.registrations_report).html_safe %>
 
-<%= report_tag(User.registrations_report) %>
+<h2>using jquery flot</h2>
+<%= flot_report_tag(User.registrations_report, :dom_id => "user_registrations_flot").html_safe %>
+
+<h2>using the google drawing api</h2>
+<%= google_report_tag(User.registrations_report) %>
